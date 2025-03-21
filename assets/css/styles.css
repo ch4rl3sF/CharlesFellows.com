@@ -1,27 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75vh;
-    background-image: url("../images/bear.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding-bottom: 20px;
+html * {
     font-family: "Azeret Mono", monospace;
 }
 
-.header-text {
-    max-width: 25%;
-}
 
 main {
     margin-top: 75vh;
@@ -63,4 +45,131 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #555;
     border-radius: 5px;
+}
+
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75vh;
+    background-image: url("../images/bear.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+    font-family: "Azeret Mono", monospace;
+}
+
+/* Adjust max-width for better text wrapping */
+.header-text {
+    max-width: 25%;  /* Adjust this based on how wide you'd like the text */
+}
+
+/* Centralized Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: #f4f4f4;
+    margin-top: 70vh;
+}
+
+/* Projects and Qualifications */
+.projects, .qualifications {
+    margin: 20px 0;
+}
+
+.projects h2, .qualifications h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;  /* Allows wrapping for smaller screens */
+}
+
+.card {
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+.card-past-projects {
+    color: black;
+    background-image: url(../images/BurnBossAppIcon.jpg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.card-working-on {
+    color: white;
+    background-image: url(../images/electronics.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card:hover {
+    background-color: white; /* Darken on hover */
+    transform: translateY(-5px); /* Small lift effect */
+}
+
+/* Qualifications */
+.qualifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.qualifications li {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+/* Main Content */
+main {
+    margin-top: 75vh;
+    padding: 20px 5%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        gap: 15px;  /* Adjust the gap for smaller screens */
+    }
+    
+    .header-text {
+        max-width: 90%;  /* Make the header text wider on smaller screens */
+    }
+
+    main {
+        padding: 20px;
+    }
 }
