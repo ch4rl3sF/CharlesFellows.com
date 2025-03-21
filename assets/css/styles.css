@@ -62,7 +62,7 @@ header {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     color: white;
     padding-bottom: 20px;
     font-family: "Azeret Mono", monospace;
@@ -70,7 +70,8 @@ header {
 
 /* Adjust max-width for better text wrapping */
 .header-text {
-    max-width: 25%;  /* Adjust this based on how wide you'd like the text */
+    max-width: 25%;
+  /* Adjust this based on how wide you'd like the text */
 }
 
 /* Centralized Banner */
@@ -89,7 +90,7 @@ header {
 
 /* Projects and Qualifications */
 .projects, .qualifications {
-    margin: 20px 0;
+    margin: 30px 0;
     text-align: left;
 }
 
