@@ -4,6 +4,11 @@ html * {
     font-family: "Azeret Mono", monospace;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 
 main {
     margin-top: 75vh;
@@ -48,7 +53,7 @@ nav ul li a:hover {
 }
 
 
-/* Header */
+/* Header 
 header {
     position: absolute;
     top: 0;
@@ -67,12 +72,79 @@ header {
     padding-bottom: 20px;
     font-family: "Azeret Mono", monospace;
 }
+*/
 
 /* Adjust max-width for better text wrapping */
 .header-text {
     max-width: 25%;
   /* Adjust this based on how wide you'd like the text */
 }
+
+
+.base-container {
+    display: grid;
+    grid-template-columns: [start] 20vw [banner-start] auto [banner-end] 20vw [end];
+    grid-template-rows: 
+        [header-start row1-start] 75vh 
+        [header-end row2-start] auto 
+        auto; /* Add more rows here */
+}
+
+.header {
+    grid-row: header-start / header-end; /* Span the header row */
+    grid-column: start / end; /* Span full width */
+    
+    background-image: url("../images/bear.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-end; /* Align text at the bottom */
+    justify-content: center; /* Center horizontally */
+    
+    text-align: left;
+    color: white;
+    padding-bottom: 20px;
+    
+    height: 100%; /* Ensure it fills the entire row */
+    width: 100%; /* Ensure it spans full width */
+}
+
+
+/* Ensure it spans full width */
+.featured-projects-background {
+    grid-row: row2-start / span 1; /* Uses named grid line */
+    width: 100vw; /* Full viewport width */
+    background-color: black;
+}
+
+/* Keep this inside .base-container */
+.featured-projects {
+    background-color: green;
+    grid-column: banner-start / banner-end;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Centralized Banner */
 .banner {
@@ -144,11 +216,6 @@ header {
     transform: translateY(-5px); /* Small lift effect */
 }
 
-/* Main Content */
-main {
-    margin-top: 75vh;
-    padding: 20px 5%;
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -167,7 +234,7 @@ main {
 }
 
 
-.container {
+.timeline-container {
 	max-width: 1024px;
 	width: 90%;
 	margin: 0 auto;
