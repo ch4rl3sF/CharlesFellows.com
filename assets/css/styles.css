@@ -61,7 +61,6 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #555;
-    border-radius: 5px;
 }
 
 
@@ -183,118 +182,13 @@ nav ul li a:hover {
     justify-self: start;
     z-index: 2;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .featured-projects-text {
     padding-top: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Centralized Banner */
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    text-align: left;
-    padding-top: 50px;
-    padding-left: 30%;
-    padding-right: 30%;
-    background-color: #f4f4f4;
-    margin-top: 70vh;
-}
-
-/* Projects and Qualifications */
-.projects, .qualifications {
-    margin: 30px 0;
-    text-align: left;
-}
-
-.projects h2, .qualifications h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-/* Card Container */
-.card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;  /* Allows wrapping for smaller screens */
-}
-
-.card {
-    padding: 20px;
-    width: 300px;
-    height: 200px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
-}
-.card-past-projects {
-    color: black;
-    background-image: url(../images/BurnBossAppIcon.jpg);
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
-}
-
-.card-working-on {
-    color: white;
-    background-image: url(../images/electronics.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.card:hover {
-    background-color: white; /* Darken on hover */
-    transform: translateY(-5px); /* Small lift effect */
-}
-
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        gap: 15px;  /* Adjust the gap for smaller screens */
-    }
-    
-    .header-text {
-        max-width: 90%;  /* Make the header text wider on smaller screens */
-    }
-
-    main {
-        padding: 20px;
-    }
-}
 
 
 .timeline-container {
