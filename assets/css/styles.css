@@ -8,6 +8,17 @@ html * {
     margin: 0;
     padding: 0;
 }
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
 
 
 main {
@@ -25,6 +36,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
+    
 }
 
 nav ul {
@@ -63,11 +75,12 @@ nav ul li a:hover {
 
 .base-container {
     display: grid;
-    grid-template-columns: [start] 20vw [banner-start] auto [banner-end] 20vw [end];
+    grid-template-columns: [start] 22vw [banner-start] auto [banner-end] 22vw [end];
     grid-template-rows: 
         [header-start row1-start] 75vh 
         [header-end row2-start] auto 
-        auto; /* Add more rows here */
+        [row3-start] auto; 
+        /* Add more rows here */
 }
 
 .header {
@@ -91,11 +104,67 @@ nav ul li a:hover {
     width: 100%; /* Ensure it spans full width */
 }
 
+#not-me-arrow {
+    position: absolute;
+    top: -600px; /* Adjust as needed */
+    left: 500px; /* Adjust as needed */
+    width: 150px; /* Resize if necessary */
+    animation: wiggle 1s infinite ease-in-out alternate;
+    z-index: 10;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-5deg) translateX(0); }
+    100% { transform: rotate(5deg) translateX(3px); }
+}
+
+
+.personal-attributes-background {
+    display: grid;
+    grid-row: row2-start / span 1; /* Uses named grid line */
+    grid-column: start / end;
+    width: 100vw; /* Full viewport width */
+    background-color: #fefefe;
+    grid-template-columns: inherit;
+}
+
+.personal-attributes {
+    display: grid;
+    grid-column-start: banner-start;
+    grid-column-end: banner-end ;
+    grid-row: row2-start;
+    color: black;
+    justify-self: start;
+    z-index: 2;
+    padding-top: 70px;
+}
+
+.personal-attributes-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.personal-attributes-feature {
+    background: #fefefe;
+    font-size: 15px;
+    text-align:start;
+    padding-top: 10px;
+
+}
+
+.personal-attributes-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
 
 /* Ensure it spans full width */
 .featured-projects-background {
     display: grid;
-    grid-row: row2-start / span 1; /* Uses named grid line */
+    grid-row: row3-start / span 1; /* Uses named grid line */
     grid-column: start / end;
     width: 100vw; /* Full viewport width */
     background-color: black;
@@ -107,11 +176,15 @@ nav ul li a:hover {
     display: grid;
     grid-column-start: banner-start;
     grid-column-end: banner-end ;
-    grid-row: row2-start;
+    grid-row: row3-start;
     color: white;
     justify-self: start;
     z-index: 2;
-    padding: 10px;
+    padding-top: 50px;
+}
+
+.featured-projects-text {
+    padding-top: 50px;
 }
 
 
