@@ -105,17 +105,17 @@ nav ul li a:hover {
 }
 
 #not-me-arrow {
-    position: absolute;
-    top: -600px; /* Adjust as needed */
-    left: 500px; /* Adjust as needed */
+    position: fixed;
+    top: 32%; /* Adjust as needed */
+    left: 57%; /* Adjust as needed */
     width: 150px; /* Resize if necessary */
     animation: wiggle 1s infinite ease-in-out alternate;
-    z-index: 10;
+    z-index: 0;
 }
 
 @keyframes wiggle {
-    0% { transform: rotate(-5deg) translateX(0); }
-    100% { transform: rotate(5deg) translateX(3px); }
+    0% { transform: rotate(-3deg) translateX(0); }
+    100% { transform: rotate(3deg) translateX(3px); }
 }
 
 
@@ -126,6 +126,7 @@ nav ul li a:hover {
     width: 100vw; /* Full viewport width */
     background-color: #fefefe;
     grid-template-columns: inherit;
+    z-index: 1;
 }
 
 .personal-attributes {
@@ -169,6 +170,7 @@ nav ul li a:hover {
     width: 100vw; /* Full viewport width */
     background-color: black;
     grid-template-columns: inherit;
+    z-index: 1;
 }
 
 /* Keep this inside .base-container */
