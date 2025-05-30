@@ -48,7 +48,6 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
 }
 
 nav ul li a {
@@ -72,7 +71,7 @@ nav ul li a:hover {
 }
 
 
-.base-container {
+.home-base-container {
     display: grid;
     grid-template-columns: [start] 22vw [banner-start] auto [banner-end] 22vw [end];
     grid-template-rows: 
@@ -83,7 +82,7 @@ nav ul li a:hover {
         [footer-start] auto;
 }
 
-.header {
+.home-header {
     grid-row: header-start / header-end; /* Span the header row */
     grid-column: start / end; /* Span full width */
     
@@ -287,4 +286,56 @@ nav ul li a:hover {
 			rgba(rgba(0, 0, 0, .3), 0)) 1 100%
 		;
 	}
+}
+
+.projects-base-container {
+    display: grid;
+    grid-template-columns: [start] 22vw [banner-start] 18vw [images] auto [banner-end] 22vw [end];
+    grid-template-rows: 
+        [header-start row1-start] auto 
+        [header-end row2-start] auto 
+        [row3-start] auto
+        /* Add more rows here */
+        [footer-start] auto;
+}
+
+.projects-header {
+    grid-row: header-start / header-end; /* Span the header row */
+    grid-column: banner-start / banner-end; /* Span full width */
+
+    display: grid;
+    
+    text-align: left;
+    color: black;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    
+    
+}
+
+.projects-list-background {
+    display: grid;
+    grid-row-start: row3-start;
+    grid-column: start / end;
+    width: 100%;
+    z-index: 0;
+    grid-template-columns: inherit;
+    background-color: black;
+}
+
+.projects-list-item-text {
+    grid-column: banner-start / images;
+    text-align: left;
+    color: white;
+}
+
+.projects-list-item-images {
+    display: flex;
+    grid-column: images / banner-end;
+    align-items: center;
+}
+
+.projects-list-item-images img {
+    max-width: 100%;
+    height: auto;
 }
