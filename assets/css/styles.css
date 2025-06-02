@@ -20,6 +20,9 @@ h3 {
     font-size: 30px;
 }
 
+body ul {
+  padding-left: 40px;
+}
 
 main {
     margin-top: 75vh;
