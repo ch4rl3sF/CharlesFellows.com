@@ -78,6 +78,7 @@ nav ul li a:hover {
         [header-start row1-start] 75vh 
         [header-end row2-start] auto 
         [row3-start] auto
+        [row4-start] auto
         /* Add more rows here */
         [footer-start] auto;
 }
@@ -162,7 +163,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-/* Ensure it spans full width */
+
 .featured-projects-background {
     display: grid;
     grid-row: row3-start / span 1; /* Uses named grid line */
@@ -190,14 +191,36 @@ nav ul li a:hover {
     padding-top: 50px;
 }
 
-.footer-background {
+.pictures-background{
     display: grid;
-    grid-row: footer-start / span 1;
+    grid-row: row4-start / span 1; /* Uses named grid line */
     grid-column: start / end;
-    width: 100vw;
+    width: 100vw; /* Full viewport width */
     background-color: black;
     grid-template-columns: inherit;
     z-index: 1;
+}
+
+.pictures-content {
+    display: grid;
+    grid-column-start: banner-start;
+    grid-column-end: banner-end ;
+    grid-row: row4-start;
+    color: white;
+    justify-self: start;
+    z-index: 2;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.footer-background {
+    display: grid;
+    grid-row: footer-start;
+    grid-column: start / end;
+    background-color: black;
+    z-index: 1;
+    grid-template-columns: inherit;
 }
 
 .footer-content {
@@ -206,8 +229,8 @@ nav ul li a:hover {
     grid-row: footer-start;
     justify-content: space-between;
     z-index: 2;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 
@@ -235,76 +258,32 @@ nav ul li a:hover {
 }
 
 
-
-.timeline-container {
-	max-width: 1024px;
-	width: 90%;
-	margin: 0 auto;
-}
-
-
-
-.timeline-item {
-	padding: 3em 2em 2em;
-	position: relative;
-	color: rgba(0, 0, 0, .7);
-	border-left: 2px solid rgba(0, 0, 0, 0.3);
-	
-	p {
-		font-size: 1rem;
-	}
-	
-	&::before {
-		content: attr(date-is);
-		position: absolute;
-		left: 2em;
-		font-weight: bold;
-		top: 1em;
-		display: block;
-		font-family: 'Roboto', sans-serif;
-		font-weight: 700;
-		font-size: .785rem;
-	}
-
-	&::after {
-		width: 10px;
-		height: 10px;
-		display: block;
-		top: 1em;
-		position: absolute;
-		left: -7px;
-		border-radius: 10px;
-		content: '';
-		border: 2px solid rgba(0, 0, 0, .3);
-		background: white;
-	}
-
-	&:last-child {
-		border-image: linear-gradient(
-			to bottom,
-			rgba(black, .3) 60%,
-			rgba(rgba(0, 0, 0, .3), 0)) 1 100%
-		;
-	}
-}
-
 .projects-base-container {
+    background-color: black;
     display: grid;
     grid-template-columns: [start] 22vw [banner-start] 18vw [images] auto [banner-end] 22vw [end];
     grid-template-rows: 
         [header-start row1-start] auto 
-        [header-end row2-start] auto 
+        [header-end row2-start] 1fr 
         [row3-start] auto
-        /* Add more rows here */
         [footer-start] auto;
+    min-height: 100vh; 
 }
 
+.projects-header-background {
+    background-color: white;
+    display: grid;
+    grid-row: header-start / header-end;
+    grid-column: start / end;
+    width: 100%;
+    grid-template-columns: inherit;
+}
 .projects-header {
     grid-row: header-start / header-end; /* Span the header row */
     grid-column: banner-start / banner-end; /* Span full width */
 
     display: grid;
-    
+    background-color: white;
     text-align: left;
     color: black;
     padding-top: 100px;
@@ -314,12 +293,11 @@ nav ul li a:hover {
 
 .projects-list-background {
     display: grid;
-    grid-row-start: row3-start;
+    grid-row-start: row2-start;
     grid-column: start / end;
     width: 100%;
     z-index: 0;
     grid-template-columns: inherit;
-    background-color: black;
 }
 
 .projects-list-item-text {
