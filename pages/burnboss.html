@@ -3,8 +3,10 @@
     <head>
         <title>BurnBoss</title>
         <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/icons/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
-    <body>
+    <body class="base-container">
         <nav>
             <ul>
                 <li><a href="../index.html">About Me</a></li>
@@ -12,6 +14,95 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
-        <h1>BurnBoss</h1>
+        <div class="base-header-background">
+            <div class="base-header-content">
+                <div>
+                <h1>BurnBoss</h1>
+                <p>
+                    A workout app designed to give freedom to the users, by allowing them to build and customise workouts.<br>
+                    I built BurnBoss for my A-level Computer Science project, where I achieved full marks for the <a href="../assets/files/BurnBoss Write-up.pdf">write-up</a>.
+                </p>
+                </div>
+                <div class="download-container">
+                <a href="../assets/files/BurnBoss_v1.0.0.apk" download class="download-button">
+                    <span class="download-icon">↓</span>
+                    <span class="download-text">Download APK</span>
+                    <span class="version-text">v1.0.0</span>
+                </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="changelog">
+
+        
+
+
+        <!--Changelog-->
+        <!--
+        Follows semantic versioning:
+        Given a version number MAJOR.MINOR.PATCH, increment the:
+
+        MAJOR version when you make incompatible API changes
+        MINOR version when you add functionality in a backward compatible manner
+        PATCH version when you make backward compatible bug fixes
+
+        Release date (always at the top)
+        Category (New Features, Improvements, Bug Fixes)
+        Impact level (Major/Minor update)
+        Actual changes in user-benefit language
+        Links to documentation (when needed)
+
+        Changelog:
+        DATE - Version x.x.x:
+            Major/Minor - Description (user friendly)
+            New Features:
+                -
+                -
+                -
+            Fixes:
+                -
+                -
+                -
+            Download link:
+                app-release-VERSION
+        -->
+        <h2 style="padding: 20px 0;">Changelog:</h2>
+        <p>Note: This changelog has only started <strong>after</strong> I had finished the project for my A-level. </p>
+        <p>Only the last 5 minor version changes (+ the first release) will be available to download.</p>
+        <div style="padding: 50px 50px;">
+            <h4>28/02/2024 - Post-A-level - v1.0.0</h4>
+            <ul>
+                <li>Major - This is what I considered to be "enough" to finish my project with. It has functionality to create, edit and play workouts, but nothing more. Unfortunately it is also riddled with bugs and missing plenty of features.</li>
+                <li> Features:
+                    <ul>
+                        <li>You can now create workouts! They can be filled with activities.</li>
+                        <li>You can edit previously created workouts, with the ability to change the name and the contents of any activities.</li>
+                        <li>Workouts can be selected from and played/ran.</li>
+                    </ul>
+                </li>
+                <li><a href="../assets/files/aBurnBoss_v1.0.0">Download BurnBoss_v1.0.0</a></li>  
+            </ul>
+        </div>
+        </div>
+        <!--What's coming-->
+
+
+
+        <footer class="footer-background">
+            <div class="footer-content">
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Charles Fellows | All rights reserved.</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/ch4rl3sf" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i> <!-- Font Awesome GitHub icon -->
+                        </a>
+                        <a href="mailto:charlesfellows16@gmail.com" target="_blank" class="social-icon">
+                            <i class="fa-solid fa-envelope"></i> <!-- Font Awesome LinkedIn icon -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

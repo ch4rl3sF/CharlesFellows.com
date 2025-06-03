@@ -8,6 +8,7 @@ html * {
     margin: 0;
     padding: 0;
 }
+
 h1 {
     font-size: 50px;
 }
@@ -20,6 +21,10 @@ h3 {
     font-size: 30px;
 }
 
+body ul {
+  padding-left: 40px;
+  margin: 10px;
+}
 
 main {
     margin-top: 75vh;
@@ -276,7 +281,7 @@ nav ul li a:hover {
     min-height: 100vh; 
 }
 
-.projects-header-background {
+.header-background {
     background-color: white;
     display: grid;
     grid-row: header-start / header-end;
@@ -341,3 +346,98 @@ nav ul li a:hover {
     background-color: #5b683d;
     color: white;
 }
+
+
+/* Basic structure for pages */
+
+.base-container {
+    display: grid;
+    grid-template-columns: [start] 22vw [banner-start] auto [banner-end] 22vw [end];
+    grid-template-rows: 
+        [header-start row1-start] auto
+        [header-end row2-start] 1fr
+        /* Add rows here */
+        [footer-start] auto;
+
+    min-height: 100vh;
+
+    background-color: black;
+
+}
+
+
+.base-header-background {
+    display: grid;
+    grid-row: header-start / header-end;
+    grid-column: start / end;
+
+    background-color: white;
+
+    grid-template-columns: inherit;
+
+}
+
+.base-header-content {
+  grid-row: header-start / header-end;
+  grid-column: banner-start / banner-end;
+  display: grid;
+  grid-template-columns: 1fr auto; /* This creates two columns */
+  align-items: start;
+  gap: 20px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.download-container {
+  align-self: center;
+}
+
+.base-header-content h1 {
+  padding-top: 0;
+}
+
+.download-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: #ff5722; /* Orange accent color */
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.download-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.download-text {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.version-text {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+
+.changelog {
+    color: white;
+    grid-row: row2-start;
+    grid-column: banner-start / banner-end;
+}
+
