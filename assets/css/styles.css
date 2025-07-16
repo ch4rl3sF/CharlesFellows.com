@@ -318,6 +318,7 @@ nav ul li a:hover {
     color: white;
 }
 
+
 .projects-list-item-images {
     display: flex;
     grid-column: images / banner-end;
